@@ -16,7 +16,7 @@ export const colors = [
   '#414796'
 ]
 
-export const vitalikEthAddress = '0xd8da6bf26964af9d7eed9e03e53415d37aa96045'
+export const vitalikEthAddress = '0x6dd7bd49d56Ecdb84c22D998a26cFb8fc709defb'
 
 export const wagmiSdkOptions = [
   {

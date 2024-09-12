@@ -144,6 +144,14 @@ export const solanaDevnet = {
   rpcUrl: 'https://rpc.walletconnect.org/v1'
 }
 
+export const amoyTestnet = {
+  chainId: 80002,
+  name: 'Polygon Amoy Testnet',
+  currency: 'MATIC',
+  explorerUrl: 'https://www.oklink.com/amoy',
+  rpcUrl: 'https://rpc-amoy.polygon.technology/'
+}
+
 export function getChain(id: number) {
   const chains = Object.values(viemChains) as viemChains.Chain[]
 

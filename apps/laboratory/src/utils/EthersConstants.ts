@@ -12,7 +12,8 @@ import {
   zkSync,
   zora,
   sepolia,
-  baseSepolia
+  baseSepolia,
+  amoyTestnet
 } from './ChainsUtil'
 
 export const EthersConstants = {
@@ -30,6 +31,7 @@ export const EthersConstants = {
     celo,
     aurora,
     sepolia,
-    baseSepolia
+    baseSepolia,
+    amoyTestnet
   ]
 }

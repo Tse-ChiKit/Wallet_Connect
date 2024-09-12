@@ -15,6 +15,8 @@ export function EthersTransactionTest() {
   async function onSendTransaction() {
     try {
       setLoading(true)
+      console.log('on send tx ')
+
       if (!walletProvider || !address) {
         throw Error('user is disconnected')
       }
@@ -22,15 +24,21 @@ export function EthersTransactionTest() {
       const signer = new JsonRpcSigner(provider, address)
       const tx = await signer.sendTransaction({
         to: vitalikEthAddress,
-        value: ethers.parseUnits('0.0001', 'gwei')
+        gasLimit: 210000,
+        gasPrice: ethers.parseUnits('29.1', 'gwei'),
+        value: ethers.parseUnits('500000', 'gwei')
       })
+
+      console.log('Starting sendUncheckedTransaction with tx:', tx)
 
       toast({
         title: 'Success',
         description: tx.hash,
         type: 'success'
       })
-    } catch {
+    } catch (e) {
+      console.log('send tx error:', e)
+
       toast({
         title: 'Error',
         description: 'Failed to sign transaction',
